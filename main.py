@@ -33,7 +33,8 @@ start_location = LONDON_COORDINATES.copy()
 
 
 def simulate_vehicle_movement():
-    pass
+    global start_location
+
 
 
 def generate_vehicle_data(device_id):
