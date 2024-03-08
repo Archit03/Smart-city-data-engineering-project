@@ -36,7 +36,6 @@ def simulate_vehicle_movement():
     global start_location
 
 
-
 def generate_vehicle_data(device_id):
     location = simulate_vehicle_movement()
 
