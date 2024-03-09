@@ -7,6 +7,28 @@
           <accountId value="VXNlcjoyMzc3MDE=" />
           <internalId value="645fbded-59ac-434f-b287-60ba010ef0ca" />
         </chat>
+        <chat>
+          <accountId value="VXNlcjoyMzc3MDE=" />
+          <internalId value="a6cdf462-ffe9-438c-b852-530e3a2790e4" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-2.0" />
+              <provider value="Anthropic" />
+              <title value="Claude 2.0" />
+            </llm>
+          </llm>
+        </chat>
+        <chat>
+          <accountId value="VXNlcjoyMzc3MDE=" />
+          <internalId value="c5eff4ac-d217-458d-b7f4-1617463a361d" />
+          <llm>
+            <llm>
+              <model value="anthropic/claude-2.0" />
+              <provider value="Anthropic" />
+              <title value="Claude 2.0" />
+            </llm>
+          </llm>
+        </chat>
       </list>
     </chats>
   </component>
