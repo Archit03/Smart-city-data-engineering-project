@@ -1,9 +1,7 @@
-
+## Vehicle simulation for smart cities
 ```markdown
-# Vehicle Simulation System for smart cities
-
 This is a Python script for simulating vehicle data and sending it to Kafka topics. It generates mock data for vehicle movement, GPS coordinates, weather conditions, and traffic camera snapshots.
-
+```
 ## Requirements
 
 - Python 3.9
