@@ -59,4 +59,4 @@ Contributions are welcome! If you find any issues or want to add new features, f
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apcache2-licence - see the [LICENSE](LICENSE) file for details.
