@@ -6,7 +6,7 @@ This is a Python script for simulating vehicle data and sending it to Kafka topi
 
 ## Requirements
 
-- Python 3.x
+- Python 3.9
 - Confluent Kafka Python client (`confluent_kafka`)
 - `simplejson` library
 
@@ -15,8 +15,7 @@ This is a Python script for simulating vehicle data and sending it to Kafka topi
 1. Clone this repository to your local machine.
 
 ```
-git clone https://github.com/your-username/vehicle-simulation.git
-```
+git clone https://github.com/Archit03/Smart-city-data-engineering-project
 
 2. Install the required Python packages using pip.
 
@@ -40,13 +39,12 @@ export EMERGENCY_TOPIC="emergency_data"
 ## Usage
 
 Run the script using Python.
-
-## System architecture of the project
-![System architecture](System.jpeg)
-
 ```bash
 python main.py
 ```
+
+## System architecture of the project
+![System architecture](System.jpeg)
 
 ## Functionality
 
