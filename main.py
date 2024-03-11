@@ -106,14 +106,47 @@ def generate_vehicle_data(device_id):
     }
 
 
+def json_serializer(obj):
+    if isinstance(obj, uuid.UUID):
+        return str(obj)
+    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
+
+
+def produce_data_kafta(producer, topic, data):
+    producer.produce(
+        topic,
+        key=str(data['id']),
+        value=json.dumps(data, default=json_serializer).encode(('utf-8')),
+        on_delivery=delivery_report
+    )
+
+
+def generate_emergency_incident_data(device_id, timestamp, location):
+    return {
+        'id': uuid.uuid4(),
+        'device_id': device_id,
+        'incident_type': uuid.uuid4(),
+        'type': random.choice(['Fire', 'Flood', 'Earthquake', 'Tornado', 'road_accident']),
+        'Timestamp': timestamp,
+        'location': location,
+        'Status': random.choice(['Active', 'resolved'])
+
+    }
+
+
 def simulate_journey(producer, device_id):
     while True:
         vehicle_data = generate_vehicle_data(device_id)
         gps_data = generate_gps_data(device_id, vehicle_data['timestamp'])
         traffic_camera_data = generate_traffic_camera_data(device_id,
-                                                           vehicle_data['timestramp'], vehicle_data['location'],
+                                                           vehicle_data['timestamp'], vehicle_data['location'],
                                                            camera_id='Camera123')
         weather_data = generate_weather_data(device_id, vehicle_data['timestamp'], vehicle_data['location'])
+        emergency_incidents = generate_emergency_incident_data(device_id, vehicle_data['timestamp'],
+
+                                                               vehicle_data['location'])
+
+        break
 
 
 if __name__ == "__main__":
